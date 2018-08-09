@@ -1,7 +1,7 @@
 <template>
-<div class="container-fluid top" >
-    <div class="col-lg-4 col-centered"></div>
-    <div class="col-lg-4 col-centered">
+<div class="container-fluid atas" >
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
         <div class="form-panel">
         
             <div class="row">
@@ -11,7 +11,7 @@
 
                 </div>
                 
-                <div id="rcorners1" class="col-xs-4 col-md-4">
+                <div id="rcorners1" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <p>Overdue</p> 
                 </div>
             </div>
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
 </div>    
 </template>
 
@@ -152,7 +152,7 @@
     
     .button {
         background-color: #4286F1;
-        padding-bottom: 10px;
+        padding-bottom: 1col-lg-4 col-md-4 col-sm-4 col-xs-40px;
         /* border-radius: 8px;
         border: none;
         color: white;

@@ -1,17 +1,17 @@
 <template>
-<div class="container-fluid top" >
-    <div class="col-lg-4 col-centered"></div>
-    <div class="col-lg-4 col-centered">
+<div class="container-fluid atas" >
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
         <div class="form-panel">
         
             <div class="row">
-                <div class="col-xs-8 col-md-8">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                 <!-- <span class="leftTitle">Riwayat Transaksi</span> -->
                 <p class="leftTitle">Riwayat Transaksi</p>
 
                 </div>
                 
-                <div id="rcorners2" class="col-xs-4 col-md-4">
+                <div id="rcorners2" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <p>Open</p> 
                 </div>
             </div>
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
 </div>    
     
 </template>
@@ -107,7 +107,7 @@
         color: black;
         padding-left: 30px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
         margin-top: 10px;
     }
     .left{
@@ -116,6 +116,7 @@
         font-weight: bold;
         margin-top: 10px;
         margin-left: 30px;
+        font-size: 16px;
     }
     .pdg{
         background-color: #4286F1;
@@ -130,6 +131,7 @@
         color: grey;
         text-align: left;
         margin-left: 30px;
+        font-size: 18px;
     }
  
     .txt{
@@ -173,7 +175,7 @@
         background: #FFCB00;
         color:white;
         font-weight: bold;
-        text-align:left;
+        text-align:col-lg-4 col-md-4 col-sm-4 col-xs-4t;
         padding: 10px;
         padding-right: 130px; 
         padding-left: 15px;

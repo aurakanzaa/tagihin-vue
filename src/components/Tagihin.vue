@@ -1,12 +1,12 @@
 <template>
     <div class="container-fluid top">
-        <div class="col-lg-4 col-centered"></div>
-        <div class="col-lg-4 col-centered">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
        
             
 
            <div class="row mt">
-          		<div class="col-lg-12">
+          		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="form-panel">
                   	  <h1 class="mb"> TAGIHIN</h1>
                         <span class="help-block fsize">Cara mudah mengirim tagihan</span>
@@ -85,10 +85,9 @@
           	</div><!-- /row -->
 
             <button type="button" class="btn btn-primary btn-block button1">Tagih</button>
-                <v-ons-button modifier="large" style="margin: 6px 0" class="pdg">Large</v-ons-button>
     
         </div>
-        <div class="col-lg-4 col-centered"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
     </div>
 </template>
 

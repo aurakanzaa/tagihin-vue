@@ -1,7 +1,7 @@
 <template>
-<div class="container-fluid top" >
-    <div class="col-lg-4 col-centered"></div>
-    <div class="col-lg-4 col-centered">
+<div class="container-fluid atas" >
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
         <div class="form-panel">
             <div class="row">
                 <div class="col-xs-8 col-md-8">
@@ -10,7 +10,7 @@
 
                 </div>
 
-                <div id="rcorners3" class="col-xs-4 col-md-4">
+                <div id="rcorners3" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <p>Paid</p>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
 </div>
 </template>
 
