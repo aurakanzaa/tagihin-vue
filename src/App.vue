@@ -20,4 +20,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.fixsize{
+        width: 100%;
+        max-width: 500px;
+    }
 </style>

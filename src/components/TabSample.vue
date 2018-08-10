@@ -1,7 +1,8 @@
 <template>
-<div class="container-fluid" >
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
+<div class="container-fluid fixsize" >
+    <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
+      <div>
       <!-- tabbar -->
       <div class="tabbar tabbar--top tabbar--top-border">
         <label class="tabbar__item tabbar--top-border__item">
@@ -73,7 +74,14 @@
 </script>
 
 <style scoped>
-    .atas{
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  .atas{
       margin-top: -40px;
       width: 100%;
       max-width: 400px;
@@ -99,5 +107,188 @@
         width: 100%;
         max-width: 400px;
     }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .atas{
+      margin-top: -40px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .bo{
+      font-weight: bold;
+    }
+    .ri{
+      text-align: right;
+      padding-right: 80px;
+    }
+    .le{
+      text-align: left;
+      padding-left: 80px;
+    }
+    .centered-form{
+      display: flex;
+      align-items: center;
+      height: 10em;
+      justify-content: center;
+    }
+    .fixsize{
+        width: 100%;
+        max-width: 400px;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .atas{
+      margin-top: -40px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .bo{
+      font-weight: bold;
+    }
+    .ri{
+      text-align: right;
+      padding-right: 80px;
+    }
+    .le{
+      text-align: left;
+      padding-left: 80px;
+    }
+    .centered-form{
+      display: flex;
+      align-items: center;
+      height: 10em;
+      justify-content: center;
+    }
+    .fixsize{
+        width: 100%;
+        max-width: 400px;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .atas{
+      margin-top: -40px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .bo{
+      font-weight: bold;
+    }
+    .ri{
+      text-align: right;
+      padding-right: 80px;
+    }
+    .le{
+      text-align: left;
+      padding-left: 80px;
+    }
+    .centered-form{
+      display: flex;
+      align-items: center;
+      height: 10em;
+      justify-content: center;
+    }
+    .fixsize{
+        width: 100%;
+        max-width: 400px;
+    }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .atas{
+      margin-top: -40px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .bo{
+      font-weight: bold;
+    }
+    .ri{
+      text-align: right;
+      padding-right: 80px;
+    }
+    .le{
+      text-align: left;
+      padding-left: 80px;
+    }
+    .centered-form{
+      display: flex;
+      align-items: center;
+      height: 10em;
+      justify-content: center;
+    }
+    .fixsize{
+        width: 100%;
+        max-width: 400px;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .atas{
+      margin-top: -40px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .bo{
+      font-weight: bold;
+    }
+    .ri{
+      text-align: right;
+      padding-right: 80px;
+    }
+    .le{
+      text-align: left;
+      padding-left: 80px;
+    }
+    .centered-form{
+      display: flex;
+      align-items: center;
+      height: 10em;
+      justify-content: center;
+    }
+    .fixsize{
+        width: 100%;
+        max-width: 400px;
+    }
+  
+}
+    
 
 </style>
