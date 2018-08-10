@@ -2,11 +2,12 @@
   <div class="container top" >
     <div class="col-lg-4 col-centered"></div>
     <div id='cssmenu' class="col-lg-4 col-centered">
-      <ul>
-        <li class='active'><a href='#paid'><span>Paid</span></a></li>
-        <li><a href='#overdue'><span>Overdue</span></a></li>
-        <li class="last"><a href='#open'><span>Open</span></a></li>
-      </ul>
+      <!-- <ul>
+        <li class='active'><a href='#'><span>Paid</span></a></li>
+        <li><a href='#'><span>Overdue</span></a></li>
+        <li class="last"><a href='#'><span>Open</span></a></li>
+      </ul> -->
+      
 
   </div>
   <div class="col-lg-4 col-centered"></div>
