@@ -103,10 +103,15 @@ import axios from 'axios';
                    jumlahTagihan : this.Tagihin.jumlahTagihan,
                    catatan : this.Tagihin.catatan,
                    tanggal : this.Tagihin.tanggal
-             }
+                    }
+                 axios.get('/api/check/'+newTagihin.noHpPenagih, ).then(response =>{
+                    console.log(newTagihin.noHpPenagih);
+                })
                 axios.post('/api/version', newTagihin).then(response =>{
                     console.log(newTagihin);
                 })
+
+               
             }
         }
     }
