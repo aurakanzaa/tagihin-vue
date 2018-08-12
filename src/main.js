@@ -7,6 +7,7 @@ import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 import VueOnsen from 'vue-onsenui'; // This already imports 'onsenui'
 
+
 Vue.use(VueOnsen);
 Vue.config.productionTip = false
 
