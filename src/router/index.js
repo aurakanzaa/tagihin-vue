@@ -1,13 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Tagihin from '@/components/Tagihin'
 import Paid from '@/components/Paid'
 import Overdue from '@/components/Overdue'
 import Open from '@/components/Open'
 import History from '@/components/History'
 import TabSample from '@/components/TabSample'
-import Coba from '@/components/Coba'
 import Backend from '@/components/Backend'
 
 Vue.use(Router)

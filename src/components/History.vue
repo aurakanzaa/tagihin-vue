@@ -1,144 +1,96 @@
-<template>
-  <div class="container top" >
-    <div class="col-lg-4 col-centered"></div>
-    <div id='cssmenu' class="col-lg-4 col-centered">
-      <!-- <ul>
-        <li class='active'><a href='#'><span>Paid</span></a></li>
-        <li><a href='#'><span>Overdue</span></a></li>
-        <li class="last"><a href='#'><span>Open</span></a></li>
-      </ul> -->
-      
 
-  </div>
-  <div class="col-lg-4 col-centered"></div>
-</div>
+  <template id="main">
+  <v-ons-page>
+    <v-ons-toolbar>
+      <div class="center">{{ title }}</div>
+    </v-ons-toolbar>
+
+    <v-ons-tabbar swipeable position="auto"
+      :tabs="tabs"
+      :visible="true"
+      :index.sync="activeIndex"
+    >
+    </v-ons-tabbar>
+  </v-ons-page>
 </template>
 
-<script>
+<template id="home">
+  <v-ons-page>
+    <p style="text-align: center">
+      Welcome home.<br><br>{{ myProp }}
+    </p>
+  </v-ons-page>
+</template>
 
+<template id="news">
+  <v-ons-page>
+    <p style="text-align: center">
+      Some news here.
+    </p>
+  </v-ons-page>
+</template>
+
+<template id="settings">
+  <v-ons-page>
+    <p style="text-align: center">
+      Change the settings.
+    </p>
+  </v-ons-page>
+</template>
+
+
+<script>
+const overduePage = {
+  template: '#overdue'
+};
+
+const paidPage = {
+  template: '#paid'
+};
+
+const openPage = {
+  template: '#open'
+};
+import axios from 'axios';
+export default {
+        name: 'History',
+            data () {
+            return {
+                activeIndex:0,
+                tabs:[
+                  {
+                  label:'Open',
+                  page: openPage,
+                  key:"OpenPage"
+                },
+                {
+                  label: 'Paid',
+                  page: paidPage,
+                  key: "PaidPage"
+
+                },
+                {
+                  label: 'Overdue',
+                  page: overduePage,
+                  key: "OverduePage"
+                }
+                ]
+
+            }
+            },
+        methods: {
+            md() {
+            return this.$ons.platform.isAndroid();
+          }
+        },
+        computed: {
+        title() {
+          return this.tabs[this.activeIndex].label;
+        }
+      }
+    }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
-#cssmenu {
-  background: white;
-  width: auto;
-}
-#cssmenu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  display: block;
-  zoom: 1;
-}
-#cssmenu ul:after {
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-#cssmenu ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-#cssmenu.align-right ul li {
-  float: right;
-}
-#cssmenu.align-center ul {
-  text-align: center;
-}
-#cssmenu ul li a {
-  color: grey;
-  text-decoration: none;
-  display: block;
-  padding: 15px 25px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  position: relative;
-  -webkit-transition: color .25s;
-  -moz-transition: color .25s;
-  -ms-transition: color .25s;
-  -o-transition: color .25s;
-  transition: color .25s;
-}
-#cssmenu ul li a:hover {
-  color: #4286F1;
-}
-#cssmenu ul li a:hover:before {
-  width: 100%;
-}
-#cssmenu ul li a:after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: -3px;
-  top: 19px;
-  height: 6px;
-  width: 6px;
-  background: #ffffff;
-  opacity: .5;
-}
-#cssmenu ul li a:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 0;
-  background: #4286F1;
-  -webkit-transition: width .25s;
-  -moz-transition: width .25s;
-  -ms-transition: width .25s;
-  -o-transition: width .25s;
-  transition: width .25s;
-}
-#cssmenu ul li.last > a:after,
-#cssmenu ul li:last-child > a:after {
-  display: none;
-}
-#cssmenu ul li.active a {
-  color: #4286F1;
-}
-#cssmenu ul li.active a:before {
-  width: 100%;
-}
-#cssmenu.align-right li.last > a:after,
-#cssmenu.align-right li:last-child > a:after {
-  display: block;
-}
-#cssmenu.align-right li:first-child a:after {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  #cssmenu ul li {
-    float: none;
-    display: block;
-  }
-  #cssmenu ul li a {
-    width: 100%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-bottom: 1px solid #fb998c;
-  }
-  #cssmenu ul li.last > a,
-  #cssmenu ul li:last-child > a {
-    border: 0;
-  }
-  #cssmenu ul li a:after {
-    display: none;
-  }
-  #cssmenu ul li a:before {
-    display: none;
-  }
-} 
-
+<style>
 
 </style>
