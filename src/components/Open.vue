@@ -75,7 +75,32 @@
 
 
 <script>
-    
+    import axios from 'axios';
+    export default {
+        name: 'Tagihin',
+            data () {
+            return {
+                Tagihin : {namaPenerima : '', noHp : '', email : '', namPenagih: '', noHpPenagih : '', jumlahTagihan : '', catatan : '', tanggal :'' }
+                }
+            },
+        methods: {
+            hello:function(){
+             let newTagihin = {
+                   namaPenerima : this.Tagihin.namaPenerima,
+                   noHp : this.Tagihin.noHp,
+                   email : this.Tagihin.email,
+                   namPenagih : this.Tagihin.namPenagih,
+                   noHpPenagih : this.Tagihin.noHpPenagih,
+                   jumlahTagihan : this.Tagihin.jumlahTagihan,
+                   catatan : this.Tagihin.catatan,
+                   tanggal : this.Tagihin.tanggal
+             }
+                axios.post('/api/version', newTagihin).then(response =>{
+                    console.log(newTagihin);
+                })
+            }
+        }
+    }
 
 </script>
 
