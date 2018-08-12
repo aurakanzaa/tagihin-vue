@@ -14,6 +14,7 @@
         <th class="center">Jumlah Tagihan</th>
         <th class="center">Catatan</th>
         <th class="center">Tanggal</th>
+        <th class="center">Status</th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +28,7 @@
         <td class="center">{{user.value.jumlahtagihan}}</td>
         <td class="center">{{user.value.catatan}}</td>
         <td class="center">{{user.value.tanggal}}</td>
+        <td class="center">{{user.value.status}}</td>
       </tr>
       
     </tbody>
@@ -34,8 +36,6 @@
 </div>
 </template>
  
-
-
 <script>
 import axios from 'axios';
     export default {
@@ -54,7 +54,6 @@ import axios from 'axios';
             }
         
     }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

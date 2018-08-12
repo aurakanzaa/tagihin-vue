@@ -43,11 +43,11 @@
       <div>
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bo le">INV 110</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bo ri">10.000</div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bo ri">100</div>
         </div> 
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bo le">Teguh</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ri">1 Agustus 2018</div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ri">1 Agtus 2018</div>
         </div> 
       </div>
       <hr>
