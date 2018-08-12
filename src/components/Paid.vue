@@ -5,7 +5,7 @@
         <div>
         <div class="form-panel">
             <div class="row">
-                <div class="col-xs-8 col-md-8">
+                <div class="col-lg-9 col-md-10 col-sm-8 col-xs-8">
                 <!-- <span class="leftTitle">Riwayat Transaksi</span> -->
                 <p class="leftTitle">Riwayat Transaksi</p>
 
@@ -54,10 +54,10 @@
                     <br> -->
 
                     <div class="row">
-                        <div class="col-xs-5 col-md-7">
+                        <div class="col-xs-5 col-md-7 col-lg-6">
                             <p class="bold">Jumlah</p>
                         </div>
-                        <div class="col-xs-7 col-md-5">
+                        <div class="col-xs-7 col-md-5 col-lg-6">
                             <label class="control-label txt">Rp 446.980</label>
                         </div>
                     </div>

@@ -13,8 +13,10 @@
   "dependencies": {
     "onsenui": "^2.10.4",
     "vue": "^2.5.2",
+    "vue-nav-tabs": "^0.5.7",
     "vue-onsenui": "^2.6.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-tabs-component": "^1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

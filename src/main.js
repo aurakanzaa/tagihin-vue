@@ -7,6 +7,10 @@ import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 import VueOnsen from 'vue-onsenui'; // This already imports 'onsenui'
 
+import VueTabs from 'vue-nav-tabs';
+import 'vue-nav-tabs/themes/vue-tabs.css';
+Vue.use(VueTabs);
+
 Vue.use(VueOnsen);
 Vue.config.productionTip = false
 
@@ -17,3 +21,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+
+
