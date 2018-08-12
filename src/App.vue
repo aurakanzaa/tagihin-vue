@@ -23,7 +23,8 @@ export default {
   margin-top: 60px;
 }
 .fixsize{
-        width: 90%;
+        width: 100%;
+        margin-top: -45px;
         max-width: 400px;
     }
 </style>

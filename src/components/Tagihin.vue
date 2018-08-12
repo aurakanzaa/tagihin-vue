@@ -1,15 +1,13 @@
 
 <template>
     <div class="container-fluid top">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
-            <!-- <div> -->
+        <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
+            <div>
            <div class="row mt">
           		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="form-panel">
-                  	  <h1 class="mb"> TAGIHIN</h1>
-                        <span class="help-block fsize">Cara mudah mengirim tagihan</span>
-                        
+                  	  
                       <form class="form-horizontal style-form" method="get">
                             <div>
                                 <p class="box1">Pengirim</p>           
@@ -74,15 +72,15 @@
                                     
                                 </div>
                             </div>
+                            <br>
                           <!-- =========== -->
-                          <br><br>
                            <button type="submit" class="btn btn-primary btn-block button1" @click="hello()">Tagih</button>
                       </form>
                   </div>
           		</div><!-- col-lg-12-->      	
           	</div><!-- /row -->
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+        <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div> -->
     </div>
 </template>
 <script>
@@ -524,6 +522,8 @@ import axios from 'axios';
   
      .top{
         margin-top: -40px;
+        width: 100%;
+
     }
     .pdg{
         size: relative;
@@ -595,5 +595,80 @@ import axios from 'axios';
   
 }
  
+ @media (min-width: 280px) and (max-width: 320px) {
+  
+     .top{
+        margin-top: -40px;
+        width: 100%;
+    }
+    .pdg{
+        size: relative;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .font{
+        font-size:30px;
+        color:blue;
+        font-family: serif;
+    }
+    .box1{
+        text-align: centered;
+        font-weight: bold;
+        color: white;
+        height: 40px;
+        width: 100px;
+        margin-bottom:30px;
+        margin-top:20px;
+        padding-top: 10px;
+        padding-right: 75px;
+        padding-left: 40px;
+        background-color: #4286F1;
+    }
+    .inner-addon { 
+        position: relative; 
+    }
+
+    /* style icon */
+    .inner-addon .icon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+
+    /* align icon */
+    .left-addon .icon  { left:  50px;}
+    .right-addon .icon { right: 0px;}
+
+    /* add padding  */
+    .left-addon input  { 
+        padding-left:  35px; 
+    }
+
+    .right-addon input { 
+        padding-right: 35px; 
+    }
+
+    .fsize{
+        font-size:15px;
+    }
+
+    .inp { 
+        width:86%;
+        background-color: transparent; 
+        border-width: 0px 0px 1px 0px; 
+        border-color: #7F8C8D;
+        border-style: solid; 
+        margin-left:50px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .button1 {
+        background-color: #4286F1;
+        height: 40px;
+        font-size: 18px;
+       
+    }
+  
+}
     
 </style>

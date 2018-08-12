@@ -1,95 +1,61 @@
-
-  <template id="main">
-  <v-ons-page>
-    <v-ons-toolbar>
-      <div class="center">{{ title }}</div>
-    </v-ons-toolbar>
-
-    <v-ons-tabbar swipeable position="auto"
-      :tabs="tabs"
-      :visible="true"
-      :index.sync="activeIndex"
-    >
-    </v-ons-tabbar>
-  </v-ons-page>
+<template>
+  <div class="container top" >
+    <div class="col-lg-4 col-centered"></div>
+    <div id='cssmenu' class="col-lg-4 col-centered">
+      <table class="table">
+    <thead>
+      <tr>
+        <th class="center">ID</th>
+        <th class="center">Nama Penerima</th>
+        <th class="center">Nomor Hp Penerima</th>
+        <th class="center">Email Penerima</th>
+        <th class="center">Nama Penagih</th>
+        <th class="center">Nomor Hp Penagih</th>
+        <th class="center">Jumlah Tagihan</th>
+        <th class="center">Catatan</th>
+        <th class="center">Tanggal</th>
+        <th class="center">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="user in users" :key="user.value._id" >
+        <td class="center">{{user.value._id}}</td>
+        <td class="center">{{user.value.namapenerima}}</td>
+        <td class="center">{{user.value.nohp}}</td>
+        <td class="center">{{user.value.email}}</td>
+        <td class="center">{{user.value.nampenagih}}</td>
+        <td class="center">{{user.value.nohppenagih}}</td>
+        <td class="center">{{user.value.jumlahtagihan}}</td>
+        <td class="center">{{user.value.catatan}}</td>
+        <td class="center">{{user.value.tanggal}}</td>
+        <td class="center">{{user.value.status}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
 </template>
-
-<template id="home">
-  <v-ons-page>
-    <p style="text-align: center">
-      Welcome home.<br><br>{{ myProp }}
-    </p>
-  </v-ons-page>
-</template>
-
-<template id="news">
-  <v-ons-page>
-    <p style="text-align: center">
-      Some news here.
-    </p>
-  </v-ons-page>
-</template>
-
-<template id="settings">
-  <v-ons-page>
-    <p style="text-align: center">
-      Change the settings.
-    </p>
-  </v-ons-page>
-</template>
-
-
+ 
 <script>
-const overduePage = {
-  template: '#overdue'
-};
-
-const paidPage = {
-  template: '#paid'
-};
-
-const openPage = {
-  template: '#open'
-};
 import axios from 'axios';
-export default {
+    export default {
         name: 'History',
             data () {
             return {
-                activeIndex:0,
-                tabs:[
-                  {
-                  label:'Open',
-                  page: openPage,
-                  key:"OpenPage"
-                },
-                {
-                  label: 'Paid',
-                  page: paidPage,
-                  key: "PaidPage"
-
-                },
-                {
-                  label: 'Overdue',
-                  page: overduePage,
-                  key: "OverduePage"
+                users :[],
                 }
-                ]
-
-            }
             },
-        methods: {
-            md() {
-            return this.$ons.platform.isAndroid();
-          }
-        },
-        computed: {
-        title() {
-          return this.tabs[this.activeIndex].label;
-        }
-      }
+        
+            mounted(){
+                axios.get('/api/data').then(response =>{
+                    console.log(response.data.rows);
+                    this.users = response.data.rows;
+                })
+            }
+        
     }
 </script>
+
 
 <style>
 

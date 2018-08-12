@@ -1,8 +1,8 @@
 <template>
-<div class="container-fluid fixsize" >
+<div  class="container-fluid fixsize"  >
     <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div> -->
     <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
-        <div>
+        <div v-for="user in users" :key="user.value._id">
         <div class="form-panel">
         
             <div class="row">
@@ -11,31 +11,31 @@
                 <p class="leftTitle">Riwayat Transaksi</p>
 
                 </div>
-                
+             
                 <div id="rcorners2" class="col-lg-3 col-md-2 col-sm-4 col-xs-4">
-                    <p>Open</p> 
+                    <p>{{ user.value.status }}</p> 
                 </div>
             </div>
             
 
-            <div>
+            <div >
                 <p class="bluebox">Invoice</p>           
             </div>
 
     
             <div>
                     <p class="bold">Nama</p>
-                    <p class="left">Adryan</p>
+                    <p class="left">{{user.value.namapenerima}}</p>
 
                     <br>
 
                     <p class="bold">Nomor Handphone</p>
-                    <p class="left">0321433</p>
+                    <p class="left">{{user.value.nohp}}</p>
 
                     <br>
 
                     <p class="bold">Email</p>
-                    <p class="left" >adryan@digiro.in</p>
+                    <p class="left" >{{user.value.email}}</p>
 
             <!-- line -->
                     <hr>
@@ -45,13 +45,13 @@
                             <p class="bold">Jumlah</p>
                         </div>
                         <div class="col-xs-7 col-md-3 col-lg-6">
-                            <label class="control-label txt">Rp 446.980</label>
+                            <label class="control-label txt">Rp {{user.value.jumlahtagihan}}</label>
                         </div>
                     </div>
 
         
                     <p class="bold">Catatan</p>
-                    <p class="left">Jangan lupa buat beli kebutuhan harian keluarga</p>
+                    <p class="left">{{user.value.catatan}}</p>
 
                     <br>
                     <br>
@@ -75,8 +75,23 @@
 
 
 <script>
-    
-
+import axios from 'axios';
+    export default {
+        name: 'History',
+            data () {
+            return {
+                users :[],
+                }
+            },
+        
+            mounted(){
+                axios.get('/api/user').then(response =>{
+                    console.log(response.data.rows);
+                    this.users = response.data.rows;
+                })
+            }
+        
+    }
 </script>
 
 

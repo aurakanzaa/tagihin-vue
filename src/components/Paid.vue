@@ -90,7 +90,22 @@
 </template>
 
 <script>
-
+import axios from 'axios';
+    export default {
+        name: 'Paid',
+            data () {
+            return {
+                user :[],
+                }
+            },
+            mounted(){
+                axios.get('/api/data').then(response =>{
+                    console.log(response.data.rows);
+                    this.users = response.data.rows;
+                })
+            }
+        
+    }
 
 </script>
 <style>
