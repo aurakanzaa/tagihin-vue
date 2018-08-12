@@ -1,10 +1,9 @@
-<template>
-    <div class="container-fluid fixsize">
-        <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
-       
-            <div>
 
+<template>
+    <div class="container-fluid top">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
+            <!-- <div> -->
            <div class="row mt">
           		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="form-panel">
@@ -20,46 +19,43 @@
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/user.png" height="15" weight="15"></i>
-                                    <input type="text" class="form-control inp" placeholder="Nama Pengirim" />
+                                    <input type="text" class="form-control inp" placeholder="Nama Pengirim" v-model="Tagihin.namPenagih" />
                                     </div>
                             </div>
-<br>
+                                <br>
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/phone.png" height="15" weight="15"></i>
-                                    <input type="number" class="form-control inp" placeholder="Nomor Handphone Pengirim" />
+                                    <input type="number" class="form-control inp" placeholder="Nomor Handphone Pengirim" v-model="Tagihin.noHpPenagih"/>
                                     </div>
                             </div>
                           <!-- =========== -->
 
-
                             <div>
                                 <p class="box1">Penerima</p>           
                             </div>
-
                           <!-- =====PENERIMA===== -->
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/user.png" height="15" weight="15"></i>
-                                    <input type="text" class="form-control inp" placeholder="Nama Penerima" />
+                                    <input type="text" class="form-control inp" placeholder="Nama Penerima" v-model="Tagihin.namaPenerima"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/mail.png" height="15" weight="15"></i>
-                                    <input type="email" class="form-control inp" placeholder="Email Penerima" />
+                                    <input type="email" class="form-control inp" placeholder="Email Penerima" v-model="Tagihin.email"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/phone.png" height="15" weight="15"></i>
-                                    <input type="number" class="form-control inp" placeholder="Nomor Handphone Penerima" />
+                                    <input type="number" class="form-control inp" placeholder="Nomor Handphone Penerima" v-model="Tagihin.noHp" />
                                 </div>
                             </div>
                           <!-- =========== -->
-
                             <div>
                                 <p class="box1">Tagihan</p>           
                             </div>
@@ -67,32 +63,55 @@
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/receipt.png" height="15" weight="15"></i>
-                                    <input type="number" class="form-control inp" placeholder="Jumlah" />
+                                    <input type="number" class="form-control inp" placeholder="Jumlah" v-model="Tagihin.jumlahTagihan" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/note.png" height="15" weight="15"></i>
-                                    <input type="text" class="form-control inp" placeholder="Catatan" />
+                                    <input type="text" class="form-control inp" placeholder="Catatan" v-model="Tagihin.catatan" />
+                                    
                                 </div>
                             </div>
                           <!-- =========== -->
                           <br><br>
+                           <button type="submit" class="btn btn-primary btn-block button1" @click="hello()">Tagih</button>
                       </form>
                   </div>
           		</div><!-- col-lg-12-->      	
           	</div><!-- /row -->
-
-            <button type="button" class="btn btn-primary btn-block button1">Tagih</button>
-    
         </div>
-        <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div> -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
     </div>
 </template>
-
 <script>
-    
+import axios from 'axios';
+    export default {
+        name: 'Tagihin',
+            data () {
+            return {
+                Tagihin : {namaPenerima : '', noHp : '', email : '', namPenagih: '', noHpPenagih : '', jumlahTagihan : '', catatan : '', tanggal :'' }
+                }
+            },
+        methods: {
+            hello:function(){
+             let newTagihin = {
+                   namaPenerima : this.Tagihin.namaPenerima,
+                   noHp : this.Tagihin.noHp,
+                   email : this.Tagihin.email,
+                   namPenagih : this.Tagihin.namPenagih,
+                   noHpPenagih : this.Tagihin.noHpPenagih,
+                   jumlahTagihan : this.Tagihin.jumlahTagihan,
+                   catatan : this.Tagihin.catatan,
+                   tanggal : this.Tagihin.tanggal
+             }
+                axios.post('/api/version', newTagihin).then(response =>{
+                    console.log(newTagihin);
+                })
+            }
+        }
+    }
 </script>
 
 <style>
