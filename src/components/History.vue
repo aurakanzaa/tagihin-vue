@@ -1,59 +1,116 @@
 <template>
-  <div class="container top" >
-      <table class="table">
-    <thead>
-      <tr>
-        <th class="center">ID</th>
-        <th class="center">Nama Penerima</th>
-        <th class="center">Nomor Hp Penerima</th>
-        <th class="center">Email Penerima</th>
-        <th class="center">Nama Penagih</th>
-        <th class="center">Nomor Hp Penagih</th>
-        <th class="center">Jumlah Tagihan</th>
-        <th class="center">Catatan</th>
-        <th class="center">Tanggal</th>
-        <th class="center">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="user in users" :key="user.value._id" >
-        <td class="center">{{user.value._id}}</td>
-        <td class="center">{{user.value.namapenerima}}</td>
-        <td class="center">{{user.value.nohp}}</td>
-        <td class="center">{{user.value.email}}</td>
-        <td class="center">{{user.value.nampenagih}}</td>
-        <td class="center">{{user.value.nohppenagih}}</td>
-        <td class="center">{{user.value.jumlahtagihan}}</td>
-        <td class="center">{{user.value.catatan}}</td>
-        <td class="center">{{user.value.tanggal}}</td>
-        <td class="center">{{user.value.status}}</td>
-      </tr>
-      
-    </tbody>
-  </table>
+<div class="container">
+  <div id="main">
+  <v-ons-page>
+    
+    <v-ons-tabbar swipeable position="auto"
+      :tabs="tabs"
+      :visible="true"
+      :index.sync="activeIndex"
+    >
+    </v-ons-tabbar>
+  </v-ons-page>
 </div>
+
+<div id="paid">
+  
+  <v-ons-page style="text-align: center">
+    <br>
+    <ons-row>
+      <ons-col>nknnk</ons-col>
+      <ons-col>10.0000</ons-col>
+  </ons-row>
+  <ons-row>
+      <ons-col>nknnk</ons-col>
+      <ons-col>10.0000</ons-col>
+  </ons-row>
+  </v-ons-page>
+</div>
+
+<div id="overdue">
+  <v-ons-page style="text-align: center">
+    <br>
+    <ons-row>
+      <ons-col>nknnk</ons-col>
+      <ons-col>11.0000</ons-col>
+  </ons-row>
+  <ons-row>
+      <ons-col>nknnk</ons-col>
+      <ons-col>11.0000</ons-col>
+  </ons-row>
+  </v-ons-page>
+</div>
+
+<div id="open">
+  <v-ons-page style="text-align: center">
+    <br>
+    <ons-row>
+      <ons-col>nknnk</ons-col>
+      <ons-col>12.0000</ons-col>
+  </ons-row>
+  <ons-row>
+      <ons-col>nknnk</ons-col>
+      <ons-col>12.0000</ons-col>
+  </ons-row>
+  </v-ons-page>
+</div>
+
+</div>
+
+
 </template>
- 
+
 <script>
+const overduePage = {
+  template: '#overdue'
+};
+
+const paidPage = {
+  template: '#paid'
+};
+
+const openPage = {
+  template: '#open'
+};
 import axios from 'axios';
-    export default {
+export default {
         name: 'History',
             data () {
             return {
-                users :[],
+                activeIndex:0,
+                tabs:[
+                  {
+                  label:'Open',
+                  page: openPage,
+                  key:"OpenPage"
+                },
+                {
+                  label: 'Paid',
+                  page: paidPage,
+                  key: "PaidPage"
+
+                },
+                {
+                  label: 'Overdue',
+                  page: overduePage,
+                  key: "OverduePage"
                 }
-            },
-        
-            mounted(){
-                axios.get('/api/data').then(response =>{
-                    console.log(response.data.rows);
-                    this.users = response.data.rows;
-                })
+                ]
+
             }
-        
+            },
+        methods: {
+            md() {
+            return this.$ons.platform.isAndroid();
+          }
+        },
+        computed: {
+        title() {
+          return this.tabs[this.activeIndex].label;
+        }
+      }
     }
 </script>
-
 
 <style>
 

@@ -1,6 +1,6 @@
 <template>
-<div class="container-fluid">
-<table class="table">
+  <div class="container top" >
+      <table class="table">
     <thead>
       <tr>
         <th class="center">ID</th>
@@ -12,44 +12,49 @@
         <th class="center">Jumlah Tagihan</th>
         <th class="center">Catatan</th>
         <th class="center">Tanggal</th>
+        <th class="center">Status</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="center">John</td>
-        <td class="center">Doe</td>
-        <td class="center">john@example.com</td>
-        <td class="center">John</td>
-        <td class="center">Doe</td>
-        <td class="center">john@example.com</td>
-        <td class="center">John</td>
-        <td class="center">Doe</td>
-        <td class="center">john@example.com</td>
+      <tr v-for="user in users" :key="user.value._id" >
+        <td class="center">{{user.value._id}}</td>
+        <td class="center">{{user.value.namapenerima}}</td>
+        <td class="center">{{user.value.nohp}}</td>
+        <td class="center">{{user.value.email}}</td>
+        <td class="center">{{user.value.nampenagih}}</td>
+        <td class="center">{{user.value.nohppenagih}}</td>
+        <td class="center">{{user.value.jumlahtagihan}}</td>
+        <td class="center">{{user.value.catatan}}</td>
+        <td class="center">{{user.value.tanggal}}</td>
+        <td class="center">{{user.value.status}}</td>
       </tr>
-      <tr>
-        <td class="center">John</td>
-        <td class="center">Doe</td>
-        <td class="center">john@example.com</td>
-        <td class="center">John</td>
-        <td class="center">Doe</td>
-        <td class="center">john@example.com</td>
-        <td class="center">John</td>
-        <td class="center">Doe</td>
-        <td class="center">john@example.com</td>
-      </tr>
+      
     </tbody>
   </table>
 </div>
 </template>
-
+ 
 <script>
-export default {
-
-}
+import axios from 'axios';
+    export default {
+        name: 'History',
+            data () {
+            return {
+                users :[],
+                }
+            },
+        
+            mounted(){
+                axios.get('/api/data').then(response =>{
+                    console.log(response.data.rows);
+                    this.users = response.data.rows;
+                })
+            }
+        
+    }
 </script>
 
+
 <style>
-.center{
-  text-align: center;
-}
+
 </style>

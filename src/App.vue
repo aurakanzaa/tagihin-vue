@@ -22,9 +22,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.fixsize{
-        width: 100%;
-        margin-top: -45px;
-        max-width: 400px;
-    }
+
 </style>

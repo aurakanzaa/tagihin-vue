@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container-fluid fixsize">
+    <div class="container-fluid top">
         <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
             <div>
@@ -21,7 +21,7 @@
                                     <input type="text" class="form-control inp" placeholder="Nama Pengirim" v-model="Tagihin.namPenagih" />
                                     </div>
                             </div>
-                               
+                                <br>
                             <div class="form-group">
                                 <div class="inner-addon left-addon">
                                     <i class="icon"> <img src="../assets/phone.png" height="15" weight="15"></i>
@@ -126,259 +126,9 @@ import axios from 'axios';
 
 @media (min-width: 1281px) {
   
-    .fixsize{
-        width: 100%;
-        margin-top: -45px;
-        max-width: 500px;
+     .top{
+        margin-top: -40px;
     }
-
-    .pdg{
-        size: relative;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    .font{
-        font-size:30px;
-        color:blue;
-        font-family: serif;
-    }
-    .box1{
-        text-align: centered;
-        font-weight: bold;
-        color: white;
-        height: 40px;
-        width: 100px;
-        margin-bottom:30px;
-        margin-top:20px;
-        padding-top: 10px;
-        padding-right: 75px;
-        padding-left: 40px;
-        background-color: #4286F1;
-    }
-    .inner-addon { 
-        position: relative; 
-    }
-
-    /* style icon */
-    .inner-addon .icon {
-        position: absolute;
-        padding: 10px;
-        pointer-events: none;
-    }
-
-    /* align icon */
-    .left-addon .icon  { left:  50px; top: -3px;}
-    .right-addon .icon { right: 0px;}
-
-    /* add padding  */
-    .left-addon input  { 
-        padding-left:  35px; 
-    }
-
-    .right-addon input { 
-        padding-right: 35px; 
-    }
-
-    .fsize{
-        font-size:15px;
-    }
-
-    .inp { 
-        width:80%;
-        background-color: transparent; 
-        border-width: 0px 0px 1px 0px; 
-        border-color: #7F8C8D;
-        border-style: solid; 
-        margin-left:50px;
-        padding-bottom: 10px;
-        padding-top: 5px;
-    }
-    .button1 {
-        background-color: #4286F1;
-        height: 40px;
-        font-size: 18px;
-       
-    }
-  
-}
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  
-    .fixsize{
-        width: 100%;
-        margin-top: -45px;
-        max-width: 400px;
-    }
-    .pdg{
-        size: relative;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    .font{
-        font-size:30px;
-        color:blue;
-        font-family: serif;
-    }
-    .box1{
-        text-align: centered;
-        font-weight: bold;
-        color: white;
-        height: 40px;
-        width: 100px;
-        margin-bottom:30px;
-        margin-top:20px;
-        padding-top: 10px;
-        padding-right: 75px;
-        padding-left: 40px;
-        background-color: #4286F1;
-    }
-    .inner-addon { 
-        position: relative; 
-    }
-
-    /* style icon */
-    .inner-addon .icon {
-        position: absolute;
-        padding: 10px;
-        pointer-events: none;
-    }
-
-    /* align icon */
-    .left-addon .icon  { left:  50px; top:-3px}
-    .right-addon .icon { right: 0px;}
-
-    /* add padding  */
-    .left-addon input  { 
-        padding-left:  35px; 
-    }
-
-    .right-addon input { 
-        padding-right: 35px; 
-    }
-
-    .fsize{
-        font-size:15px;
-    }
-
-    .inp { 
-        width:80%;
-        background-color: transparent; 
-        border-width: 0px 0px 1px 0px; 
-        border-color: #7F8C8D;
-        border-style: solid; 
-        margin-left:50px;
-        padding-bottom: 10px;
-        padding-top: 5px;
-    }
-    .button1 {
-        background-color: #4286F1;
-        height: 40px;
-        font-size: 18px;
-       
-    }
-  
-}
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
-     .fixsize{
-        width: 100%;
-        margin-top: -45px;
-        max-width: 400px;
-    }
-    .pdg{
-        size: relative;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    .font{
-        font-size:30px;
-        color:blue;
-        font-family: serif;
-    }
-    .box1{
-        text-align: centered;
-        font-weight: bold;
-        color: white;
-        height: 40px;
-        width: 100px;
-        margin-bottom:30px;
-        margin-top:20px;
-        padding-top: 10px;
-        padding-right: 75px;
-        padding-left: 40px;
-        background-color: #4286F1;
-    }
-    .inner-addon { 
-        position: relative; 
-    }
-
-    /* style icon */
-    .inner-addon .icon {
-        position: absolute;
-        padding: 10px;
-        pointer-events: none;
-    }
-
-    /* align icon */
-    .left-addon .icon  { left:  50px; top: -3px;}
-    .right-addon .icon { right: 0px;}
-
-    /* add padding  */
-    .left-addon input  { 
-        padding-left:  35px; 
-    }
-
-    .right-addon input { 
-        padding-right: 35px; 
-    }
-
-    .fsize{
-        font-size:15px;
-    }
-
-    .inp { 
-        width:80%;
-        background-color: transparent; 
-        border-width: 0px 0px 1px 0px; 
-        border-color: #7F8C8D;
-        border-style: solid; 
-        margin-left:50px;
-        padding-bottom: 10px;
-        padding-top: 5px;
-    }
-    .button1 {
-        background-color: #4286F1;
-        height: 40px;
-        font-size: 18px;
-       
-    }
-  
-}
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    .fixsize{
-        width: 100%;
-        margin-top: -45px;
-        max-width: 400px;
-    }
-
     .pdg{
         size: relative;
         margin-left: 30px;
@@ -431,7 +181,7 @@ import axios from 'axios';
     }
 
     .inp { 
-        width:81%;
+        width:86%;
         background-color: transparent; 
         border-width: 0px 0px 1px 0px; 
         border-color: #7F8C8D;
@@ -450,16 +200,14 @@ import axios from 'axios';
 }
 
 /* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
   
-    .fixsize{
-        width: 100%;
-        margin-top: -45px;
-        max-width: 400px;
+     .top{
+        margin-top: -40px;
     }
     .pdg{
         size: relative;
@@ -496,7 +244,7 @@ import axios from 'axios';
     }
 
     /* align icon */
-    .left-addon .icon  { left:  50px; top:-3px;}
+    .left-addon .icon  { left:  50px;}
     .right-addon .icon { right: 0px;}
 
     /* add padding  */
@@ -513,7 +261,247 @@ import axios from 'axios';
     }
 
     .inp { 
-        width: 78%;
+        width:86%;
+        background-color: transparent; 
+        border-width: 0px 0px 1px 0px; 
+        border-color: #7F8C8D;
+        border-style: solid; 
+        margin-left:50px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .button1 {
+        background-color: #4286F1;
+        height: 40px;
+        font-size: 18px;
+       
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+     .top{
+        margin-top: -40px;
+    }
+    .pdg{
+        size: relative;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .font{
+        font-size:30px;
+        color:blue;
+        font-family: serif;
+    }
+    .box1{
+        text-align: centered;
+        font-weight: bold;
+        color: white;
+        height: 40px;
+        width: 100px;
+        margin-bottom:30px;
+        margin-top:20px;
+        padding-top: 10px;
+        padding-right: 75px;
+        padding-left: 40px;
+        background-color: #4286F1;
+    }
+    .inner-addon { 
+        position: relative; 
+    }
+
+    /* style icon */
+    .inner-addon .icon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+
+    /* align icon */
+    .left-addon .icon  { left:  50px;}
+    .right-addon .icon { right: 0px;}
+
+    /* add padding  */
+    .left-addon input  { 
+        padding-left:  35px; 
+    }
+
+    .right-addon input { 
+        padding-right: 35px; 
+    }
+
+    .fsize{
+        font-size:15px;
+    }
+
+    .inp { 
+        width:86%;
+        background-color: transparent; 
+        border-width: 0px 0px 1px 0px; 
+        border-color: #7F8C8D;
+        border-style: solid; 
+        margin-left:50px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .button1 {
+        background-color: #4286F1;
+        height: 40px;
+        font-size: 18px;
+       
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+     .top{
+        margin-top: -40px;
+    }
+    .pdg{
+        size: relative;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .font{
+        font-size:30px;
+        color:blue;
+        font-family: serif;
+    }
+    .box1{
+        text-align: centered;
+        font-weight: bold;
+        color: white;
+        height: 40px;
+        width: 100px;
+        margin-bottom:30px;
+        margin-top:20px;
+        padding-top: 10px;
+        padding-right: 75px;
+        padding-left: 40px;
+        background-color: #4286F1;
+    }
+    .inner-addon { 
+        position: relative; 
+    }
+
+    /* style icon */
+    .inner-addon .icon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+
+    /* align icon */
+    .left-addon .icon  { left:  50px;}
+    .right-addon .icon { right: 0px;}
+
+    /* add padding  */
+    .left-addon input  { 
+        padding-left:  35px; 
+    }
+
+    .right-addon input { 
+        padding-right: 35px; 
+    }
+
+    .fsize{
+        font-size:15px;
+    }
+
+    .inp { 
+        width:86%;
+        background-color: transparent; 
+        border-width: 0px 0px 1px 0px; 
+        border-color: #7F8C8D;
+        border-style: solid; 
+        margin-left:50px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .button1 {
+        background-color: #4286F1;
+        height: 40px;
+        font-size: 18px;
+       
+    }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+     .top{
+        margin-top: -40px;
+    }
+    .pdg{
+        size: relative;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .font{
+        font-size:30px;
+        color:blue;
+        font-family: serif;
+    }
+    .box1{
+        text-align: centered;
+        font-weight: bold;
+        color: white;
+        height: 40px;
+        width: 100px;
+        margin-bottom:30px;
+        margin-top:20px;
+        padding-top: 10px;
+        padding-right: 75px;
+        padding-left: 40px;
+        background-color: #4286F1;
+    }
+    .inner-addon { 
+        position: relative; 
+    }
+
+    /* style icon */
+    .inner-addon .icon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+
+    /* align icon */
+    .left-addon .icon  { left:  50px;}
+    .right-addon .icon { right: 0px;}
+
+    /* add padding  */
+    .left-addon input  { 
+        padding-left:  35px; 
+    }
+
+    .right-addon input { 
+        padding-right: 35px; 
+    }
+
+    .fsize{
+        font-size:15px;
+    }
+
+    .inp { 
+        width:86%;
         background-color: transparent; 
         border-width: 0px 0px 1px 0px; 
         border-color: #7F8C8D;
@@ -554,12 +542,12 @@ import axios from 'axios';
         font-family: serif;
     }
     .box1{
-        text-align: left;
+        text-align: centered;
         font-weight: bold;
         color: white;
         height: 40px;
         width: 100px;
-        margin-bottom:20px;
+        margin-bottom:30px;
         margin-top:20px;
         padding-top: 10px;
         padding-right: 75px;
@@ -578,7 +566,7 @@ import axios from 'axios';
     }
 
     /* align icon */
-    .left-addon .icon  { left:  50px; top:-3px;}
+    .left-addon .icon  { left:  50px;}
     .right-addon .icon { right: 0px;}
 
     /* add padding  */
@@ -595,12 +583,13 @@ import axios from 'axios';
     }
 
     .inp { 
-        width: 80%;
+        width:86%;
         background-color: transparent; 
         border-width: 0px 0px 1px 0px; 
         border-color: #7F8C8D;
         border-style: solid; 
         margin-left:50px;
+        padding-bottom: 10px;
         padding-top: 5px;
     }
     .button1 {
@@ -624,7 +613,7 @@ import axios from 'axios';
         margin-right: 30px;
     }
     .font{
-        font-size:20px;
+        font-size:30px;
         color:blue;
         font-family: serif;
     }
@@ -634,7 +623,7 @@ import axios from 'axios';
         color: white;
         height: 40px;
         width: 100px;
-        margin-bottom:10px;
+        margin-bottom:30px;
         margin-top:20px;
         padding-top: 10px;
         padding-right: 75px;
@@ -648,11 +637,12 @@ import axios from 'axios';
     /* style icon */
     .inner-addon .icon {
         position: absolute;
+        padding: 10px;
         pointer-events: none;
     }
 
     /* align icon */
-    .left-addon .icon  { left:  50px; top:-3px;}
+    .left-addon .icon  { left:  50px;}
     .right-addon .icon { right: 0px;}
 
     /* add padding  */
@@ -669,7 +659,7 @@ import axios from 'axios';
     }
 
     .inp { 
-        width: 76%;
+        width:86%;
         background-color: transparent; 
         border-width: 0px 0px 1px 0px; 
         border-color: #7F8C8D;
