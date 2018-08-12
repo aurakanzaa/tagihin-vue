@@ -1,7 +1,5 @@
 <template>
   <div class="container top" >
-    <div class="col-lg-4 col-centered"></div>
-    <div id='cssmenu' class="col-lg-4 col-centered">
       <table class="table">
     <thead>
       <tr>
