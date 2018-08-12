@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container-fluid top">
+    <div class="container-fluid fixsize">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered">
             <!-- <div> -->

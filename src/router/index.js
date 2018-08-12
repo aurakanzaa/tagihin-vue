@@ -8,6 +8,7 @@ import Open from '@/components/Open'
 import History from '@/components/History'
 import TabSample from '@/components/TabSample'
 import Coba from '@/components/Coba'
+import Backend from '@/components/Backend'
 
 Vue.use(Router)
 
@@ -44,9 +45,9 @@ export default new Router({
       component : TabSample
     },
     {
-      path: '/coba',
-      name: 'Coba',
-      component: Coba
+      path: '/backend',
+      name: 'Backend',
+      component: Backend
     },
 
   ]
