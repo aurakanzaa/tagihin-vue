@@ -106,11 +106,17 @@ import axios from 'axios';
                    tanggal : this.Tagihin.tanggal
                     }
                  axios.get('/api/check/'+newTagihin.noHpPenagih, ).then(response =>{
-                    console.log(newTagihin.noHpPenagih);
+                    if(response.data.rows==""){
+                        // axios.post('/api/version', newTagihin).then(response =>{
+                        // console.log(newTagihin);
+                        // })
+                        console.log("kososng");
+                    }else{
+                        console.log(response.data.rows.noHpPenagih);
+                    };
+                    
                 })
-                axios.post('/api/version', newTagihin).then(response =>{
-                    console.log(newTagihin);
-                })
+               
 
                
             }

@@ -4,7 +4,7 @@
     <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
         <div v-for="user in users" :key="user.value._id">
         <div class="form-panel">
-        
+            
             <div class="row">
                 <div class="col-lg-9 col-md-10 col-sm-8 col-xs-8">
                 <!-- <span class="leftTitle">Riwayat Transaksi</span> -->
@@ -12,9 +12,18 @@
 
                 </div>
              
-                <div id="rcorners2" class="col-lg-3 col-md-2 col-sm-4 col-xs-4">
+                <div  v-if='user.value.status == "open"' id="rcorners2" class="col-lg-3 col-md-2 col-sm-4 col-xs-4">
                     <p>{{ user.value.status }}</p> 
                 </div>
+
+                <div v-else-if='user.value.status == "paid"'  id="rcorners3" class="col-lg-3 col-md-2 col-sm-4 col-xs-4">
+                    <p>{{ user.value.status }}</p> 
+                </div>
+
+                 <div v-else-if='user.value.status == "overdue"'  id="rcorners1" class="col-lg-3 col-md-2 col-sm-4 col-xs-4">
+                    <p>{{ user.value.status }}</p> 
+                </div>
+                
             </div>
             
 
@@ -83,7 +92,6 @@ import axios from 'axios';
                 users :[],
                 }
             },
-        
             mounted(){
                 axios.get('/api/user').then(response =>{
                     console.log(response.data.rows);
@@ -173,6 +181,28 @@ import axios from 'axios';
         width: 100px;
         height: 40px; 
     }
+      #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
 
   
 }
@@ -246,9 +276,31 @@ import axios from 'axios';
         font-weight: bold;
         text-align:left;
         padding: 10px;
-        padding-right: 173px; 
-        padding-left: 25px;
+        padding-right: 80px; 
+        padding-left: 15px;
         width: 100px;
+        height: 40px; 
+    }
+      #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
         height: 40px; 
     }
 
@@ -326,6 +378,28 @@ import axios from 'axios';
         padding-right:140px; 
         padding-left: 25px;
         width: 100px;
+        height: 40px; 
+    }
+    #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
         height: 40px; 
     }
 
@@ -407,6 +481,28 @@ import axios from 'axios';
         width: 100px;
         height: 40px; 
     }
+    #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
 
   
 }
@@ -482,6 +578,28 @@ import axios from 'axios';
         padding-right: 130px; 
         padding-left: 15px;
         width: 100px;
+        height: 40px; 
+    }
+    #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
         height: 40px; 
     }
 
@@ -562,6 +680,28 @@ import axios from 'axios';
         width: 100px;
         height: 40px; 
     }
+    #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
 
   
 }
@@ -627,6 +767,28 @@ import axios from 'axios';
     #rcorners2 {
         border-radius: 80px 0px 0px 80px;
         background: #FFCB00;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+    #rcorners3 {
+        border-radius: 80px 0px 0px 80px;
+        background: #48DC61;
+        color:white;
+        font-weight: bold;
+        text-align:left;
+        padding: 10px; 
+        padding-left: 25px;
+        width: 91px;
+        height: 40px; 
+    }
+        #rcorners1 {
+        border-radius: 80px 0px 0px 80px;
+        background: #F83E24;
         color:white;
         font-weight: bold;
         text-align:left;
