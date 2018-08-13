@@ -85,43 +85,6 @@
     </div>
 </template>
 <script>
-<<<<<<< HEAD
-import axios from 'axios';
-    export default {
-        name: 'Tagihin',
-            data () {
-            return {
-                Tagihin : {namaPenerima : '', noHp : '', email : '', namPenagih: '', noHpPenagih : '', jumlahTagihan : '', catatan : '', tanggal :'' }
-                }
-            },
-        methods: {
-            hello:function(){
-             let newTagihin = {
-                   namaPenerima : this.Tagihin.namaPenerima,
-                   noHp : this.Tagihin.noHp,
-                   email : this.Tagihin.email,
-                   namPenagih : this.Tagihin.namPenagih,
-                   noHpPenagih : this.Tagihin.noHpPenagih,
-                   jumlahTagihan : this.Tagihin.jumlahTagihan,
-                   catatan : this.Tagihin.catatan,
-                   tanggal : this.Tagihin.tanggal
-                    }
-                 axios.get('/api/check/'+newTagihin.noHpPenagih, ).then(response =>{
-                    if(response.data.rows==""){
-                        // axios.post('/api/version', newTagihin).then(response =>{
-                        // console.log(newTagihin);
-                        // })
-                        console.log("kososng");
-                    }else{
-                        console.log(response.data.rows.noHpPenagih);
-                    };
-                    
-                })
-               
-
-               
-            }
-=======
 import axios from "axios";
 export default {
   name: "Tagihin",
@@ -159,7 +122,6 @@ export default {
           });
         } else {
           console.log("onok open");
->>>>>>> b4201ecf5817217ff5e7272d86b54c8e8c7e87b7
         }
       });
     }

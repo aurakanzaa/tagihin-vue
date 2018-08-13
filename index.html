@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>tagihin</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous">
-      <link rel="stylesheet" href="https://unpkg.com/vue-nav-tabs/themes/vue-tabs.css">
-      
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://unpkg.com/vue-nav-tabs/dist/vue-tabs.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>tagihin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/vue-nav-tabs/themes/vue-tabs.css">
+
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/vue-nav-tabs/dist/vue-tabs.js"></script>
+  <script>
+    function openTagih(evt, tagihName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tagihName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  <script>
+
+  </script>
+</body>
+
 </html>
