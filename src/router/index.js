@@ -7,6 +7,7 @@ import Open from '@/components/Open'
 import History from '@/components/History'
 import TabSample from '@/components/TabSample'
 import Backend from '@/components/Backend'
+import Scroll from '@/components/Scroll'
 
 Vue.use(Router)
 
@@ -47,6 +48,12 @@ export default new Router({
       name: 'Backend',
       component: Backend
     },
+    {
+      path: '/scroll',
+      name: 'Scroll',
+      component: Scroll
+    },
+
 
   ]
 })

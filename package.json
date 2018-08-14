@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "mdbvue": "^4.5.0",
     "onsenui": "^2.10.4",
     "vue": "^2.5.2",
     "vue-nav-tabs": "^0.5.7",

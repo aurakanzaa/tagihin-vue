@@ -3,12 +3,12 @@
     <div class="container-fluid fixsize">
         <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"></div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-centered"> -->
-            <div>
+            <div class="">
            <div class="row mt">
           		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="form-panel">
-                  	   <h1 class="mb"> TAGIHIN</h1>
-                        <span class="help-block fsize">Cara mudah mengirim tagihan</span>
+                  	   <!-- <h1 class="mb"> TAGIHIN</h1>
+                        <span class="help-block fsize">Cara mudah mengirim tagihan</span> -->
                       <form class="form-horizontal style-form" method="get">
                             <div>
                                 <p class="box1">Pengirim</p>           
@@ -122,6 +122,7 @@ import axios from 'axios';
     /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
+  laptop ara
 */
 
 @media (min-width: 1281px) {
@@ -211,7 +212,7 @@ import axios from 'axios';
   
     .fixsize{
         width: 100%;
-        margin-top: -45px;
+        margin-top: -65px;
         max-width: 400px;
     }
     .pdg{
@@ -235,7 +236,7 @@ import axios from 'axios';
         padding-top: 10px;
         padding-right: 75px;
         padding-left: 40px;
-        background-color: #4286F1;
+        background-color: black;
     }
     .inner-addon { 
         position: relative; 
@@ -534,14 +535,33 @@ import axios from 'axios';
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
+  punya tanggon
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-     .top{
-        margin-top: -40px;
-        width: 100%;
+.scrollbar {
+    float: left;
+    height: auto;
+    background: #fff;
+    overflow: scroll;
+    margin-bottom: 205px;
+}
+.force-overflow {
+    min-height: 450px;
+}
+.scrollbar-primary::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5; }
 
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4285F4; }
+
+     .fixsize{
+        width: 100%;
+        margin-top: -58px;
+        max-width: 400px;
+        overflow: auto;
     }
     .pdg{
         size: relative;
@@ -614,9 +634,10 @@ import axios from 'axios';
  
  @media (min-width: 280px) and (max-width: 320px) {
   
-     .top{
-        margin-top: -40px;
+    .fixsize{
         width: 100%;
+        margin-top: -75px;
+        max-width: 400px;
     }
     .pdg{
         size: relative;
@@ -686,5 +707,5 @@ import axios from 'axios';
     }
   
 }
-    
+
 </style>

@@ -6,6 +6,9 @@ import router from './router'
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 import VueOnsen from 'vue-onsenui'; // This already imports 'onsenui'
+// import 'font-awesome/css/font-awesome.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'; 
+// import 'mdbvue/build/css/mdb.css';
 
 // import VueTabs from 'vue-nav-tabs';
 // import 'vue-nav-tabs/themes/vue-tabs.css';
